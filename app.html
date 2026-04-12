@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Homework Tracker</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<button id="backBtn" class="top-btn">←</button>
+<button id="themeToggle" class="top-btn right">Dark</button>
+
+<div class="app">
+
+  <h1>📚 Homework Tracker</h1>
+
+  <div class="input-card">
+    <input id="homeworkInput" placeholder="Homework">
+    <input id="classInput" placeholder="Class">
+    <input id="dueInput" type="date">
+
+    <div class="color-row">
+      <span>Color</span>
+      <input type="color" id="colorPicker">
+      <div id="colorPreview"></div>
+    </div>
+
+    <div id="errorMsg"></div>
+
+    <button id="add">Add Assignment</button>
+  </div>
+
+  <!-- HEADER -->
+  <div class="assignment-header">
+    <div></div>
+    <div data-sort="homework">Homework</div>
+    <div data-sort="className">Class</div>
+    <div data-sort="dueDate">Due</div>
+    <div></div>
+  </div>
+
+  <div class="added"></div>
+</div>
+
+<footer class="footer">
+  Created by Ben • Homework Tracker
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
