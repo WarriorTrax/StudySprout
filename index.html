@@ -3,7 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TaskNest Hub</title>
+  <title>NextTask Hub</title>
+
+  <link rel="icon" type="image/svg+xml" href="nexttask-logo.svg">
+
   <style>
     * {
       margin: 0;
@@ -140,18 +143,25 @@
     }
   </style>
 </head>
+
 <body>
 
 <header>
-  TaskNest
+  <div class="brand">
+    <img src="assets/nexttask-logo.svg" class="logo" alt="NextTask Logo">
+    NextTask
+  </div>
+
   <div class="subtitle">Your school productivity hub</div>
+
   <button class="toggle" onclick="toggleTheme()">Toggle Dark</button>
 </header>
 
 <div class="container">
   <div class="grid">
 
-    <div class="card" onclick="openTool('homework')">
+    <!-- ✅ FIXED: Now properly links to app.html -->
+    <div class="card" onclick="window.location.href='app.html'">
       <div>
         <div class="card-title">Homework Tracker</div>
         <div class="card-desc">Track assignments, due dates, and completion progress.</div>
@@ -159,43 +169,35 @@
       <div class="card-footer" id="homeworkStat">Loading...</div>
     </div>
 
-    <div class="card" onclick="openTool('calendar')">
-      <div>
-        <div class="card-title">Calendar</div>
-        <div class="card-desc">View upcoming tests, deadlines, and events.</div>
-      </div>
-      <div class="card-footer">View schedule</div>
+    <div class="card">
+      <div class="card-title">Calendar</div>
+      <div class="card-desc">View upcoming tests, deadlines, and events.</div>
+      <div class="card-footer">Coming soon</div>
     </div>
 
-    <div class="card" onclick="openTool('grades')">
-      <div>
-        <div class="card-title">Grade Tracker</div>
-        <div class="card-desc">Monitor your grades and overall performance.</div>
-      </div>
-      <div class="card-footer">Analyze progress</div>
+    <div class="card">
+      <div class="card-title">Grade Tracker</div>
+      <div class="card-desc">Monitor your grades and overall performance.</div>
+      <div class="card-footer">Coming soon</div>
     </div>
 
-    <div class="card" onclick="openTool('study')">
-      <div>
-        <div class="card-title">Study Planner</div>
-        <div class="card-desc">Plan study sessions and stay on track.</div>
-      </div>
-      <div class="card-footer">Start planning</div>
+    <div class="card">
+      <div class="card-title">Study Planner</div>
+      <div class="card-desc">Plan study sessions and stay on track.</div>
+      <div class="card-footer">Coming soon</div>
     </div>
 
-    <div class="card" onclick="openTool('notes')">
-      <div>
-        <div class="card-title">Notes</div>
-        <div class="card-desc">Quick notes and reminders in one place.</div>
-      </div>
-      <div class="card-footer">Open notes</div>
+    <div class="card">
+      <div class="card-title">Notes</div>
+      <div class="card-desc">Quick notes and reminders in one place.</div>
+      <div class="card-footer">Coming soon</div>
     </div>
 
   </div>
 </div>
 
 <footer>
-  TaskNest © 2026
+  NextTask — Know what’s next.
 </footer>
 
 <script>
@@ -203,11 +205,7 @@
     document.body.classList.toggle('dark');
   }
 
-  function openTool(tool) {
-    alert("Open: " + tool + " page");
-  }
-
-  // fake demo data (replace later with real homework system)
+  // demo stats (replace later with real storage from app.html if you want)
   let homework = [
     { done: false },
     { done: true },

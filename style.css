@@ -200,3 +200,25 @@ button {
 .today {
   outline: 2px solid #facc15;
 }
+
+.brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.logo {
+  width: 28px;
+  height: 28px;
+}
+
+.logo {
+  transition: transform 0.2s ease;
+}
+
+.logo:hover {
+  transform: rotate(8deg) scale(1.1);
+}
